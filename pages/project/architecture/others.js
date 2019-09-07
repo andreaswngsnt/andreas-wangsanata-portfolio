@@ -51,7 +51,7 @@ class OtherArchitectureProjectPage extends Component {
 					<Grid container spacing={3}>
 						<Grid item xl={3} md={3} xs={12} style={{ display: "flex", alignItems: "center" }}>
 							<ClickableImage
-								src="/static/images/projects/others/other_project1.png"
+								src="/static/images/projects/architecture/others/other_project1.png"
 								caption=""
 								onClick={this.handleOpenDialog}
 							/>
@@ -76,14 +76,14 @@ class OtherArchitectureProjectPage extends Component {
 							<Grid container spacing={2}>
 								<Grid item xl={12} md={12} xs={12}>
 									<ClickableImage
-										src="/static/images/projects/others/other_project2_1.jpg"
+										src="/static/images/projects/architecture/others/other_project2_1.jpg"
 										caption=""
 										onClick={this.handleOpenDialog}
 									/>
 								</Grid>
 								<Grid item xl={12} md={12} xs={12}>
 									<ClickableImage
-										src="/static/images/projects/others/other_project2_2.jpg"
+										src="/static/images/projects/architecture/others/other_project2_2.jpg"
 										caption=""
 										onClick={this.handleOpenDialog}
 									/>
@@ -103,7 +103,7 @@ class OtherArchitectureProjectPage extends Component {
 						</Grid>
 						<Grid item xl={3} md={3} xs={12} style={{ display: "flex", alignItems: "center" }}>
 							<ClickableImage
-								src="/static/images/projects/others/other_project3_1.jpg"
+								src="/static/images/projects/architecture/others/other_project3_1.jpg"
 								caption=""
 								onClick={this.handleOpenDialog}
 							/>
@@ -128,14 +128,14 @@ class OtherArchitectureProjectPage extends Component {
 							<Grid container spacing={2}>
 								<Grid item xl={6} md={6} xs={12}>
 									<ClickableImage
-										src="/static/images/projects/others/other_project4_1.jpg"
+										src="/static/images/projects/architecture/others/other_project4_1.jpg"
 										caption=""
 										onClick={this.handleOpenDialog}
 									/>
 								</Grid>
 								<Grid item xl={6} md={6} xs={12}>
 									<ClickableImage
-										src="/static/images/projects/others/other_project4_2.jpg"
+										src="/static/images/projects/architecture/others/other_project4_2.jpg"
 										caption=""
 										onClick={this.handleOpenDialog}
 									/>

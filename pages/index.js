@@ -91,7 +91,17 @@ class HomePage extends Component {
 				</Head>
 
 				<Header />
-				<FullBanner />
+
+				<FullBanner
+					bannerContent={
+						[
+							{ title: "Pattern", imageSrc: "/static/images/projects/architecture/pattern/photo_1.jpg", linkHref: "/project/architecture/pattern" },
+							{ title: "Arch-Gallery", imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_intro.jpg", linkHref: "/project/architecture/arch-gallery" },
+							{ title: "Quarry Museum", imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_intro.jpg", linkHref: "/project/architecture/quarry-museum" },
+							{ title: "GoodFood", imageSrc: "/static/images/projects/architecture/good-food/goodfood_intro.jpg", linkHref: "/project/architecture/good-food" }
+						]
+					}
+				/>
 
 				<div style={{ padding: '2em', zIndex: "1", backgroundColor: "#EEEEEE" }}>
 					<Grid container justify="center">
@@ -105,16 +115,15 @@ class HomePage extends Component {
 										title="dokCBT"
 										subtitle={
 											<Fragment>
-												Location: San Francisco | Company: <a href="https://www.tmda.com">TMDA</a>
+												Web Development | <a href="https://www.dokcbt.com">www.dokcbt.com</a>
 											</Fragment>
 										}
 										description={
-											`The site of this project is a four-storied former factory space located in San Francisco.
-										This space was then redesigned to be used for an office for a renewable energy company named Pattern Energy.
-										In order to reflect the values of the company, the space was designed using sustainable and natural materials.`
+											`This project is an education technology website that is used to help prospective medical doctors to pass their licensure exam.
+											The features in this website include a real-time exam simulation with a thorough explanation.`
 										}
-										imageSrc="/static/images/projects/pattern/photo_1.jpg"
-										linkHref="/project/architecture/pattern"
+										imageSrc="/static/images/projects/computing/dokcbt/main.png"
+										linkHref="/project/computing/dokcbt"
 										size="lg"
 									/>
 								</Grid>
@@ -137,7 +146,7 @@ class HomePage extends Component {
 										This space was then redesigned to be used for an office for a renewable energy company named Pattern Energy.
 										In order to reflect the values of the company, the space was designed using sustainable and natural materials.`
 										}
-										imageSrc="/static/images/projects/pattern/photo_1.jpg"
+										imageSrc="/static/images/projects/architecture/pattern/photo_1.jpg"
 										linkHref="/project/architecture/pattern"
 										size="lg"
 									/>
@@ -155,7 +164,7 @@ class HomePage extends Component {
 										As a luxurious dwelling for a family, this house has many features that makes it one of a kind in this neighborhood.
 										The direct view of the city, the swimming pool deck, the spacious master bedroom, and natural lighting makes this house truly special.`
 										}
-										imageSrc="/static/images/projects/hillside-avenue/rendering_1.jpg"
+										imageSrc="/static/images/projects/architecture/hillside-avenue/rendering_1.jpg"
 										linkHref="/project/architecture/hillside-avenue"
 										size="lg"
 									/>

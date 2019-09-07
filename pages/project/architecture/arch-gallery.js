@@ -1,9 +1,7 @@
 ﻿import { Component, Fragment, createRef } from "react"
 import Head from "next/head"
 
-import Dialog from "@material-ui/core/Dialog"
-import Hidden from "@material-ui/core/Hidden"
-import Grid from "@material-ui/core/Grid"
+import { Dialog, Hidden, Grid } from "@material-ui/core"
 
 import ClickableImage from "../../../components/ClickableImage"
 import ProjectLayout from "../../../components/Layout/ProjectLayout"
@@ -57,7 +55,7 @@ class ArchGalleryArchitectureProjectPage extends Component {
 					</h1>
 					<div style={{ marginBottom: "2rem" }}>
 						<ClickableImage
-							src="/static/images/projects/arch-gallery/archgallery_intro.jpg"
+							src="/static/images/projects/architecture/arch-gallery/archgallery_intro.jpg"
 							caption=""
 							onClick={this.handleOpenDialog}
 						/>
@@ -82,7 +80,7 @@ class ArchGalleryArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_diagram.png", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_diagram.png", caption: "" }
 								]
 							}
 							xl={12}
@@ -94,15 +92,15 @@ class ArchGalleryArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_6.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_7.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_8.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_render600_9.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_6.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_7.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_8.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_render600_9.jpg", caption: "" }
 								]
 							}
 							xl={4}
@@ -114,14 +112,14 @@ class ArchGalleryArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_wormeye600_1.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_wormeye600_2.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_wormeye600_3.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_oblique600_1.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_oblique600_2.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_oblique600_3.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_oblique600_4.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_oblique600_5.png", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_wormeye600_1.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_wormeye600_2.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_wormeye600_3.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_oblique600_1.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_oblique600_2.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_oblique600_3.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_oblique600_4.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_oblique600_5.png", caption: "" }
 								]
 							}
 							xl={4}
@@ -133,8 +131,8 @@ class ArchGalleryArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_section_1.png", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_section_2.png", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_section_1.png", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_section_2.png", caption: "" }
 								]
 							}
 							xl={12}
@@ -146,28 +144,28 @@ class ArchGalleryArchitectureProjectPage extends Component {
 						<Grid container spacing={3}>
 							<Grid item xl={12} md={12} xs={12}>
 								<ClickableImage
-									src="/static/images/projects/arch-gallery/archgallery_plan_1.png"
+									src="/static/images/projects/architecture/arch-gallery/archgallery_plan_1.png"
 									caption=""
 									onClick={this.handleOpenDialog}
 								/>
 							</Grid>
 							<Grid item xl={4} md={4} xs={12}>
 								<ClickableImage
-									src="/static/images/projects/arch-gallery/archgallery_plan_2.png"
+									src="/static/images/projects/architecture/arch-gallery/archgallery_plan_2.png"
 									caption=""
 									onClick={this.handleOpenDialog}
 								/>
 							</Grid>
 							<Grid item xl={4} md={4} xs={12}>
 								<ClickableImage
-									src="/static/images/projects/arch-gallery/archgallery_plan_3.png"
+									src="/static/images/projects/architecture/arch-gallery/archgallery_plan_3.png"
 									caption=""
 									onClick={this.handleOpenDialog}
 								/>
 							</Grid>
 							<Grid item xl={4} md={4} xs={12}>
 								<ClickableImage
-									src="/static/images/projects/arch-gallery/archgallery_plan_4.png"
+									src="/static/images/projects/architecture/arch-gallery/archgallery_plan_4.png"
 									caption=""
 									onClick={this.handleOpenDialog}
 								/>
@@ -179,15 +177,15 @@ class ArchGalleryArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_6.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_7.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_8.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/arch-gallery/archgallery_photo600_9.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_6.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_7.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_8.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/arch-gallery/archgallery_photo600_9.jpg", caption: "" }
 								]
 							}
 							xl={4}

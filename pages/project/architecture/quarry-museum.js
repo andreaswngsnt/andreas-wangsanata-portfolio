@@ -57,7 +57,7 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 					</h1>
 					<div style={{ marginBottom: "2rem" }}>
 						<ClickableImage
-							src="/static/images/projects/quarry-museum/quarrymuseum_intro.jpg"
+							src="/static/images/projects/architecture/quarry-museum/quarrymuseum_intro.jpg"
 							caption=""
 							onClick={this.handleOpenDialog}
 						/>
@@ -77,10 +77,10 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_map1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_map2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_map3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_map4.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_map1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_map2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_map3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_map4.jpg", caption: "" }
 								]
 							}
 							xl={3}
@@ -92,7 +92,7 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_siteplan.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_siteplan.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -104,8 +104,8 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_diagram1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_diagram2.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_diagram1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_diagram2.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -116,14 +116,14 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<Grid container spacing={3}>
 							<Grid item xl={4} md={4} xs={12}>
 								<ClickableImage
-									src="/static/images/projects/quarry-museum/quarrymuseum_diagram3.jpg"
+									src="/static/images/projects/architecture/quarry-museum/quarrymuseum_diagram3.jpg"
 									caption=""
 									onClick={this.handleOpenDialog}
 								/>
 							</Grid>
 							<Grid item xl={8} md={8} xs={12}>
 								<ClickableImage
-									src="/static/images/projects/quarry-museum/quarrymuseum_diagram4.jpg"
+									src="/static/images/projects/architecture/quarry-museum/quarrymuseum_diagram4.jpg"
 									caption=""
 									onClick={this.handleOpenDialog}
 								/>
@@ -133,18 +133,18 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering6.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering7.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering8.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering9.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering10.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering11.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_rendering12.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering6.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering7.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering8.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering9.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering10.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering11.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_rendering12.jpg", caption: "" }
 								]
 							}
 							xl={6}
@@ -156,8 +156,8 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_section1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_section2.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_section1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_section2.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -169,12 +169,12 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_plan1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_plan2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_plan3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_plan4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_plan5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_plan6.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_plan1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_plan2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_plan3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_plan4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_plan5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_plan6.jpg", caption: "" }
 								]
 							}
 							xl={4}
@@ -188,10 +188,10 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_photo1440_1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_photo1440_2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_photo1440_3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_photo1440_4.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_photo1440_1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_photo1440_2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_photo1440_3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/quarry-museum/quarrymuseum_photo1440_4.jpg", caption: "" }
 								]
 							}
 							xl={6}

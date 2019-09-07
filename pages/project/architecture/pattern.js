@@ -59,7 +59,7 @@ class PatternArchitectureProjectPage extends Component {
 
 					<div style={{ marginBottom: "2rem" }}>
 						<ClickableImage
-							src="/static/images/projects/pattern/photo_1.jpg"
+							src="/static/images/projects/architecture/pattern/photo_1.jpg"
 							caption=""
 							onClick={this.handleOpenDialog}
 						/>
@@ -80,15 +80,15 @@ class PatternArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/pattern/photo_1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_6.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_7.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_8.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/photo_9.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_6.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_7.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_8.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/photo_9.jpg", caption: "" }
 								]
 							}
 							xl={4}
@@ -104,11 +104,11 @@ class PatternArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/pattern/rendering_1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/rendering_2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/rendering_3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/rendering_4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/pattern/rendering_5.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/pattern/rendering_1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/rendering_2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/rendering_3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/rendering_4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/pattern/rendering_5.jpg", caption: "" }
 								]
 							}
 							xl={4}

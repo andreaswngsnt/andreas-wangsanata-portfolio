@@ -58,7 +58,7 @@ class HillsideAvenueArchitectureProject extends Component {
 
 					<div style={{ marginBottom: "2rem" }}>
 						<ClickableImage
-							src="/static/images/projects/hillside-avenue/rendering_1.jpg"
+							src="/static/images/projects/architecture/hillside-avenue/rendering_1.jpg"
 							caption=""
 							onClick={this.handleOpenDialog}
 						/>
@@ -79,9 +79,9 @@ class HillsideAvenueArchitectureProject extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/hillside-avenue/rendering_1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/hillside-avenue/rendering_2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/hillside-avenue/rendering_3.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/hillside-avenue/rendering_1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/hillside-avenue/rendering_2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/hillside-avenue/rendering_3.jpg", caption: "" }
 								]
 							}
 							xl={4}

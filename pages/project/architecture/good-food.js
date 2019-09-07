@@ -56,7 +56,7 @@ class GoodFoodArchitectureProjectPage extends Component {
 					</h1>
 					<div style={{ marginBottom: "2rem" }}>
 						<ClickableImage
-							src="/static/images/projects/good-food/goodfood_intro.jpg"
+							src="/static/images/projects/architecture/good-food/goodfood_intro.jpg"
 							caption=""
 							onClick={this.handleOpenDialog}
 						/>
@@ -77,7 +77,7 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_diagram1.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_diagram1.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -89,10 +89,10 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_render1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_render2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_render3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_render4.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_render1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_render2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_render3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_render4.jpg", caption: "" }
 								]
 							}
 							xl={6}
@@ -104,7 +104,7 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_siteplan.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_siteplan.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -116,9 +116,9 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_section1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_section2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_section3.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_section1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_section2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_section3.jpg", caption: "" }
 								]
 							}
 							xl={4}
@@ -130,7 +130,7 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_conceptualcut.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_conceptualcut.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -142,12 +142,12 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_plan1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_plan2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_plan3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_plan4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_plan5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_plan6.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_plan1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_plan2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_plan3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_plan4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_plan5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_plan6.jpg", caption: "" }
 								]
 							}
 							xl={4}
@@ -159,7 +159,7 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_performance.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_performance.jpg", caption: "" }
 								]
 							}
 							xl={12}
@@ -173,13 +173,13 @@ class GoodFoodArchitectureProjectPage extends Component {
 						<ImagePanels
 							images={
 								[
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model1.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model2.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model3.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model4.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model5.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model6.jpg", caption: "" },
-									{ imageSrc: "/static/images/projects/good-food/goodfood_model7.jpg", caption: "" }
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model1.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model2.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model3.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model4.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model5.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model6.jpg", caption: "" },
+									{ imageSrc: "/static/images/projects/architecture/good-food/goodfood_model7.jpg", caption: "" }
 								]
 							}
 							xl={4}

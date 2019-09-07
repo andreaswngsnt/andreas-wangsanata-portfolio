@@ -8,19 +8,14 @@ class FullBanner extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
-			bannerContent: [
-				{ title: "Pattern", imageSrc: "/static/images/projects/pattern/photo_1.jpg", linkHref: "/project/architecture/pattern" },
-				{ title: "Arch-Gallery", imageSrc: "/static/images/projects/arch-gallery/archgallery_intro.jpg", linkHref: "/project/architecture/arch-gallery" },
-				{ title: "Quarry Museum", imageSrc: "/static/images/projects/quarry-museum/quarrymuseum_intro.jpg", linkHref: "/project/architecture/quarry-museum" },
-				{ title: "GoodFood", imageSrc: "/static/images/projects/good-food/goodfood_intro.jpg", linkHref: "/project/architecture/good-food" }
-			],
 			currentBannerIndex: 0
 		}
 	}
 
 	componentDidMount() {
 		this.bannerInvervalFunction = setInterval(() => {
-			const { bannerContent, currentBannerIndex } = this.state
+			const { bannerContent } = this.props
+			const { currentBannerIndex } = this.state
 			const nextBannerIndex = currentBannerIndex + 1
 			this.setState({
 				currentBannerIndex: currentBannerIndex < bannerContent.length - 1
@@ -35,7 +30,8 @@ class FullBanner extends Component {
 	}
 
 	handleForwardContent = (event) => {
-		const { bannerContent, currentBannerIndex } = this.state
+		const { bannerContent } = this.props
+		const { currentBannerIndex } = this.state
 		if (currentBannerIndex < bannerContent.length - 1) {
 			this.setState({ currentBannerIndex: currentBannerIndex + 1 })
 		} else {
@@ -44,7 +40,8 @@ class FullBanner extends Component {
 	}
 
 	handleRewindContent = (event) => {
-		const { bannerContent, currentBannerIndex } = this.state
+		const { bannerContent } = this.props
+		const { currentBannerIndex } = this.state
 		if (currentBannerIndex > 0) {
 			this.setState({ currentBannerIndex: currentBannerIndex - 1 })
 		} else {
@@ -53,7 +50,12 @@ class FullBanner extends Component {
 	}
 
 	render() {
-		const { bannerContent, currentBannerIndex } = this.state
+		const { bannerContent } = this.props
+		const { currentBannerIndex } = this.state
+
+		const title = bannerContent[currentBannerIndex].title
+		const backgroundImage = bannerContent[currentBannerIndex].imageSrc
+		const linkHref = bannerContent[currentBannerIndex].linkHref
 
 		return (
 			<section
@@ -74,7 +76,7 @@ class FullBanner extends Component {
 						backgroundPosition: "center",
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
-						backgroundImage: `url(${bannerContent[currentBannerIndex].imageSrc})`,
+						backgroundImage: `url(${backgroundImage})`,
 						transition: "all 1s"
 					}}
 				>
@@ -86,9 +88,9 @@ class FullBanner extends Component {
 							<h3 style={{ textAlign: "center", color: "#FFFFFF" }}>Project Showcase</h3>
 							<hr />
 							<h1 style={{ textAlign: "center", fontSize: "3rem", fontFamily: "Roboto Slab" }}>
-								<Link href={bannerContent[currentBannerIndex].linkHref}>
+								<Link href={linkHref}>
 									<a style={{ textDecoration: "none", color: "#FFFFFF" }}>
-										{bannerContent[currentBannerIndex].title}
+										{title}
 									</a>
 								</Link>
 							</h1>

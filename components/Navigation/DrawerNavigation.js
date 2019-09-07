@@ -8,7 +8,6 @@ const styles = {
 	link: { cursor: "pointer", textDecoration: "none", color: "#a6a6a6" }
 }
 
-// TODO add a recursive render function
 const menuObject = {
 	data: [
 		{ name: "Home", linkHref: "/" },
@@ -16,7 +15,7 @@ const menuObject = {
 		{
 			name: "Computing",
 			children: [
-				{ name: "dokCBT", linkHref: "https://www.dokcbt.com", externalLink: true }
+				{ name: "dokCBT", linkHref: "/project/computing/dokcbt" }
 			]
 		},
 		{
