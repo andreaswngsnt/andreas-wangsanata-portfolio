@@ -40,12 +40,12 @@ const WorkExperienceText = (props) => {
 	)
 }
 
-const ResumePage = ({ hostURL, currentURL }) => {
+const ResumePage = () => {
 	const pageTitle = "Resume  | Andreas Wangsanata"
 	const pageDescription = "Here is my resume page that displays my skills, work experience, and education."
 	const pageKeywords = "resume, andreas, wangsanata"
-	const pageImageURL = `${hostURL}/static/images/background.jpg`
-	const pageURL = currentURL
+	const pageImageURL = `https://www.andreaswngsnt.com/static/images/background.jpg`
+	const pageURL = `https://www.andreaswngsnt.com/resume`
 
 	return (
 		<Fragment>
@@ -235,17 +235,6 @@ const ResumePage = ({ hostURL, currentURL }) => {
 
 		</Fragment>
 	)
-}
-
-ResumePage.getInitialProps = ({ req }) => {
-	if (req && req.url && req.protocol && (req.headers && req.headers.host)) {
-		return {
-			hostURL: `${req.protocol}://${req.headers.host}`,
-			currentURL: `${req.protocol}://${req.headers.host}${req.url}`
-		}
-	} else {
-		return {}
-	}
 }
 
 export default ResumePage

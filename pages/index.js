@@ -103,25 +103,12 @@ const SubsectionTitle = ({ children }) => {
 }
 
 class HomePage extends Component {
-	static getInitialProps = ({ req }) => {
-		if (req && req.url && req.protocol && (req.headers && req.headers.host)) {
-			return {
-				hostURL: `${req.protocol}://${req.headers.host}`,
-				currentURL: `${req.protocol}://${req.headers.host}${req.url}`
-			}
-		} else {
-			return {}
-		}
-	}
-
 	render() {
-		const { hostURL, currentURL } = this.props
-
 		const pageTitle = "Home | Andreas Wangsanata"
 		const pageDescription = "Here is my resume page that displays my skills, work experience, and education."
 		const pageKeywords = "personal, website, home, andreas, wangsanata"
-		const pageImageURL = `${hostURL}/static/images/background.jpg`
-		const pageURL = currentURL
+		const pageImageURL = `https://www.andreaswngsnt.com/static/images/background.jpg`
+		const pageURL = `https://www.andreaswngsnt.com`
 
 		return (
 			<Fragment>
