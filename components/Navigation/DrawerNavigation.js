@@ -42,12 +42,7 @@ const menuObject = {
 		{
 			name: "Design",
 			children: [
-				{
-					name: "UI/UX",
-					children: [
-						{ name: "dokYAY", linkHref: "/project/design/dokyay" }
-					]
-				}
+				{ name: "dokYAY", linkHref: "/project/design/dokyay" }
 			]
 		}
 	]

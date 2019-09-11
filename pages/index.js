@@ -36,13 +36,13 @@ const ProjectCard = (props) => {
 						<img src={imageSrc} style={styles.image} />
 					</Grid>
 					<Grid item xl={8} md={8} xs={12}>
-						<h2 style={styles.title}>
+						<h3 style={styles.title}>
 							<Link href={linkHref}>
 								<a style={styles.link}>
 									{title}
 								</a>
 							</Link>
-						</h2>
+						</h3>
 						<p>{subtitle}</p>
 						<p>{description}</p>
 						<Link href={linkHref}>
@@ -60,13 +60,13 @@ const ProjectCard = (props) => {
 		return (
 			<Paper square={true} style={styles.paper}>
 				<img src={imageSrc} style={styles.image} />
-				<h2 style={styles.title}>
+				<h3 style={styles.title}>
 					<Link href={linkHref}>
 						<a style={styles.link}>
 							{title}
 						</a>
 					</Link>
-				</h2>
+				</h3>
 				<p>
 					{description.length > 200 ? description.substring(0, 200) + "..." : description}
 				</p>
@@ -82,12 +82,57 @@ const ProjectCard = (props) => {
 	}
 }
 
+const SectionCategoryTitle = ({ children }) => {
+	return (
+		<h1 style={{ fontFamily: "Roboto Slab" }}>
+			{children}
+		</h1>
+	)
+}
+
+const SectionTitle = ({ children }) => {
+	return (
+		<h2 style={{ fontFamily: "Roboto Slab" }}>
+			{children}
+		</h2>
+	)
+}
+
+const SubsectionTitle = ({ children }) => {
+	return <h3>{children}</h3>
+}
+
 class HomePage extends Component {
+	static getInitialProps = ({ req }) => {
+		if (req && req.url && req.protocol && (req.headers && req.headers.host)) {
+			return {
+				hostURL: `${req.protocol}://${req.headers.host}`,
+				currentURL: `${req.protocol}://${req.headers.host}${req.url}`
+			}
+		} else {
+			return {}
+		}
+	}
+
 	render() {
+		const { hostURL, currentURL } = this.props
+
+		const pageTitle = "Home | Andreas Wangsanata"
+		const pageDescription = "Here is my resume page that displays my skills, work experience, and education."
+		const pageKeywords = "personal, website, home, andreas, wangsanata"
+		const pageImageURL = `${hostURL}/static/images/background.jpg`
+		const pageURL = currentURL
+
 		return (
 			<Fragment>
 				<Head>
-					<title>Homepage | Andreas Wangsanata</title>
+					<title>{pageTitle}</title>
+					<meta name='description' content={pageDescription} />
+					<meta name='keywords' content={pageKeywords} />
+					<meta property='og:title' content={pageTitle} />
+					<meta property='og:description' content={pageDescription} />
+					<meta property='og:image' content={pageImageURL} />
+					<meta property='og:url' content={pageURL} />
 				</Head>
 
 				<Header />
@@ -106,9 +151,12 @@ class HomePage extends Component {
 				<div style={{ padding: '2em', zIndex: "1", backgroundColor: "#EEEEEE" }}>
 					<Grid container justify="center">
 						<Grid item xl={8} md={10} xs={12}>
-							<h1 style={{ fontFamily: "Roboto Slab" }}>
+							<SectionCategoryTitle>
+								Project Showcases
+							</SectionCategoryTitle>
+							<SectionTitle>
 								Computing
-							</h1>
+							</SectionTitle>
 							<Grid container spacing={3} style={{ marginBottom: "2rem" }}>
 								<Grid item xl={12} md={12} xs={12}>
 									<ProjectCard
@@ -128,10 +176,10 @@ class HomePage extends Component {
 									/>
 								</Grid>
 							</Grid>
-							<h1 style={{ fontFamily: "Roboto Slab" }}>
+							<SectionTitle>
 								Architecture
-							</h1>
-							<h2>Career Projects</h2>
+							</SectionTitle>
+							<SubsectionTitle>Career Projects</SubsectionTitle>
 							<Grid container spacing={3} style={{ marginBottom: "2rem" }}>
 								<Grid item xl={12} md={12} xs={12}>
 									<ProjectCard
@@ -170,7 +218,7 @@ class HomePage extends Component {
 									/>
 								</Grid>
 							</Grid>
-							<h2>Academic Projects</h2>
+							<SubsectionTitle>Academic Projects</SubsectionTitle>
 							<Grid container spacing={3}>
 								<Grid item xl={3} md={3} xs={12}>
 									<ProjectCard

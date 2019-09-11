@@ -77,7 +77,7 @@ class FullBanner extends Component {
 						backgroundRepeat: "no-repeat",
 						backgroundSize: "cover",
 						backgroundImage: `url(${backgroundImage})`,
-						transition: "all 1s"
+						transition: "1s ease-out"
 					}}
 				>
 					<div style={{ width: "100%", display: "flex", justifyContent: "space-between", alignItems: "center" }}>

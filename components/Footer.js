@@ -35,8 +35,7 @@ const Footer = () => {
 					textAlign: "center"
 				}}
 			>
-				Copyright &copy; {new Date().getFullYear()}
-				&nbsp; Andreas Wangsanata.
+				Copyright &copy; {new Date().getFullYear()}. Andreas Wangsanata.
 				</div>
 		</footer>
 	)
