@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
 
 import { Dialog, Hidden } from "@material-ui/core"
 import SwipeableViews from "react-swipeable-views"
@@ -112,11 +111,14 @@ class DokCBTComputingProjectPage extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>dokCBT | Andreas Wangsanata</title>
-				</Head>
-
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="dokCBT"
+					projectDescription={`This project began as an idea to alleviate the stress experienced by prospective medical doctor graduates in their journey to licensure.
+						This website is created to help the medical students to prepare for this exam. As of today, the website administers accurate examination simulations, 
+						composed with the latest problem set and thorough answer discussions, so that students can understand medical concepts with ease.`}
+					projectKeywords="project, web, development, application, dokcbt, andreas, wangsanata"
+					projectImageURL="/static/images/projects/computing/dokcbt/screenshot_landing.png"
+				>
 					<div style={{ marginTop: "1rem", marginBottom: "2rem", display: "flex", justifyContent: "center" }}>
 						<img src="/static/images/projects/computing/dokcbt/logo_black.png" style={{ height: "2rem" }} ref={this.introRef} />
 					</div>

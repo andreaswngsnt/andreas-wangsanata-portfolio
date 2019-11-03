@@ -107,8 +107,7 @@ class HomePage extends Component {
 		const pageTitle = "Home | Andreas Wangsanata"
 		const pageDescription = "Here is my resume page that displays my skills, work experience, and education."
 		const pageKeywords = "personal, website, home, andreas, wangsanata"
-		const pageImageURL = `https://www.andreaswngsnt.com/static/images/background.jpg`
-		const pageURL = `https://www.andreaswngsnt.com`
+		const pageImageURL = `${process.env.hostname}/static/images/default_site_image.jpg`
 
 		return (
 			<Fragment>
@@ -119,7 +118,6 @@ class HomePage extends Component {
 					<meta property='og:title' content={pageTitle} />
 					<meta property='og:description' content={pageDescription} />
 					<meta property='og:image' content={pageImageURL} />
-					<meta property='og:url' content={pageURL} />
 				</Head>
 
 				<Header />

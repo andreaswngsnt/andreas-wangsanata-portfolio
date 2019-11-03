@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
 
 import Dialog from "@material-ui/core/Dialog"
 import Hidden from "@material-ui/core/Hidden"
@@ -40,11 +39,13 @@ class HillsideAvenueArchitectureProject extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>Hillside Avenue | Andreas Wangsanata</title>
-				</Head>
-
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="Hillside Avenue"
+					projectDescription={`This project is a residential construction located on the scenic hills of Los Angeles. 
+						As a luxurious dwelling for a family, this house has many features that makes it one of a kind in this neighborhood.`}
+					projectKeywords="project, residential, hillside, avenue, andreas, wangsanata"
+					projectImageURL="/static/images/projects/architecture/hillside-avenue/rendering_1.jpg"
+				>
 					<h1
 						ref={this.introRef}
 						style={{
@@ -102,6 +103,18 @@ class HillsideAvenueArchitectureProject extends Component {
 						</ul>
 						<p><em>For recruiters: Feel free to contact me for more information on these activities.</em></p>
 					</div>
+
+					<Hidden smDown>
+						<SectionNavigation
+							sections={
+								[
+									{ name: "Introduction", ref: this.introRef },
+									{ name: "Drawings", ref: this.drawingRef },
+									{ name: "Contributions", ref: this.contribRef }
+								]
+							}
+						/>
+					</Hidden>
 
 				</ProjectLayout>
 				<Dialog maxWidth="xl" open={isDialogOpen} onClose={this.handleCloseDialog}>

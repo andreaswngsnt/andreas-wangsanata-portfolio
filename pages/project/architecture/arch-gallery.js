@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
 
 import { Dialog, Hidden, Grid } from "@material-ui/core"
 
@@ -39,10 +38,14 @@ class ArchGalleryArchitectureProjectPage extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>Arch-Gallery | Andreas Wangsanata</title>
-				</Head>
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="Arch-Gallery"
+					projectDescription={`This project is about the exploration of spaces created by the barrel roof typology.
+						In this project, barrel roof is seen as both a form giver and space maker that is linear.
+						By understanding barrel roof in this way, it is used to create the primary massing of the building and also the carved avenue spaces.`}
+					projectKeywords="project, academic, arch, gallery, andreas, wangsanata"
+					projectImageURL="/static/images/projects/architecture/arch-gallery/archgallery_intro.jpg"
+				>
 					<h1
 						ref={this.introRef}
 						style={{

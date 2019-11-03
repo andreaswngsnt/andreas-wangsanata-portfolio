@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment } from "react"
-import Head from "next/head"
 
 import Dialog from "@material-ui/core/Dialog"
 import Grid from "@material-ui/core/Grid"
@@ -35,10 +34,12 @@ class OtherArchitectureProjectPage extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>Other Architecture Projects | Andreas Wangsanata</title>
-				</Head>
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="Other Architecture Projects"
+					projectDescription={`A list of my other architecture projects`}
+					projectKeywords="project, academic, others, andreas, wangsanata"
+					projectImageURL="/static/images/projects/architecture/others/other_project1.png"
+				>
 					<h1
 						style={{
 							marginBottom: "2rem",

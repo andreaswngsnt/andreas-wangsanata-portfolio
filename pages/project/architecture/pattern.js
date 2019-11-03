@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
 
 import Dialog from "@material-ui/core/Dialog"
 import Hidden from "@material-ui/core/Hidden"
@@ -41,11 +40,13 @@ class PatternArchitectureProjectPage extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>Pattern | Andreas Wangsanata</title>
-				</Head>
-
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="Pattern"
+					projectDescription={`The site of this project is a four-storied former factory space located in San Francisco.
+						This space was then redesigned to be used for an office for a renewable energy company named Pattern Energy.`}
+					projectKeywords="project, commercial, pattern, energy, andreas, wangsanata"
+					projectImageURL="/static/images/projects/architecture/pattern/photo_1.jpg"
+				>
 					<h1
 						ref={this.introRef}
 						style={{

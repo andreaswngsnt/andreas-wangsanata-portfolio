@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
 
 import Dialog from "@material-ui/core/Dialog"
 import Hidden from "@material-ui/core/Hidden"
@@ -40,10 +39,14 @@ class GoodFoodArchitectureProjectPage extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>GoodFood | Andreas Wangsanata</title>
-				</Head>
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="GoodFood"
+					projectDescription={`This project is a prototype of a new architectural typology where the architecture is used to educate the public about healthy, good food.
+						This building is a hybrid of a public food court, various educational facilities, such as classes and auditorium, and a research facility.
+						The dichotomy of these functions is represented in the exterior.`}
+					projectKeywords="project, academic, goodfood, andreas, wangsanata"
+					projectImageURL="/static/images/projects/architecture/good-food/goodfood_intro.jpg"
+				>
 					<h1
 						ref={this.introRef}
 						style={{

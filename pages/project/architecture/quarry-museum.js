@@ -1,5 +1,4 @@
 ﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
 
 import Dialog from "@material-ui/core/Dialog"
 import Hidden from "@material-ui/core/Hidden"
@@ -41,10 +40,14 @@ class QuarryMuseumArchitectureProjectPage extends Component {
 
 		return (
 			<Fragment>
-				<Head>
-					<title>Quarry Museum | Andreas Wangsanata</title>
-				</Head>
-				<ProjectLayout>
+				<ProjectLayout
+					projectTitle="Quarry Museum"
+					projectDescription={`Based on an abandoned quarry filled with water, this museum showcases the impact of human activity on the landscape.
+						A quarry is a site where materials are displaced from the site into another one. Therefore the concept of this museum is displacement.
+						This displacement is represented in the building by creating forms that look like open containers that becomes the exhibition spaces of the rocks of this geology museum.`}
+					projectKeywords="project, academic, quarry, museum, andreas, wangsanata"
+					projectImageURL="/static/images/projects/architecture/quarry-museum/quarrymuseum_intro.jpg"
+				>
 					<h1
 						ref={this.introRef}
 						style={{

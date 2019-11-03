@@ -1,7 +1,7 @@
 ﻿import { Fragment } from "react"
 import Head from "next/head"
 
-import Grid from "@material-ui/core/Grid"
+import { Grid } from "@material-ui/core"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -44,8 +44,7 @@ const ResumePage = () => {
 	const pageTitle = "Resume  | Andreas Wangsanata"
 	const pageDescription = "Here is my resume page that displays my skills, work experience, and education."
 	const pageKeywords = "resume, andreas, wangsanata"
-	const pageImageURL = `https://www.andreaswngsnt.com/static/images/background.jpg`
-	const pageURL = `https://www.andreaswngsnt.com/resume`
+	const pageImageURL = `${process.env.hostname}/static/images/default_site_image.jpg`
 
 	return (
 		<Fragment>
@@ -56,7 +55,6 @@ const ResumePage = () => {
 				<meta property='og:title' content={pageTitle} />
 				<meta property='og:description' content={pageDescription} />
 				<meta property='og:image' content={pageImageURL} />
-				<meta property='og:url' content={pageURL} />
 			</Head>
 
 			<Header />
@@ -134,6 +132,9 @@ const ResumePage = () => {
 								</div>
 							</Grid>
 							<Grid item xl={12} md={12} xs={12}>
+								<hr />
+							</Grid>
+							<Grid item xl={12} md={12} xs={12}>
 								<h2>Skills</h2>
 								<Grid container>
 									<Grid item xl={12} md={12} xs={12}>
@@ -167,7 +168,6 @@ const ResumePage = () => {
 													<li>ReactJS</li>
 													<li>NextJS</li>
 													<li>ExpressJS</li>
-													<li>Django</li>
 												</ul>
 											</Grid>
 											<Grid item xl={3} md={3} xs={12}>
@@ -177,7 +177,6 @@ const ResumePage = () => {
 													<li>GitHub</li>
 													<li>Linux</li>
 													<li>MongoDB</li>
-													<li>PostgreSQL</li>
 													<li>Amazon Web Services</li>
 												</ul>
 											</Grid>

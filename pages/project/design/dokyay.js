@@ -1,5 +1,4 @@
-﻿import { Component, Fragment, createRef } from "react"
-import Head from "next/head"
+﻿import { Component, Fragment } from "react"
 
 import { Button, Grid } from "@material-ui/core"
 import SwipeableViews from "react-swipeable-views"
@@ -160,50 +159,26 @@ const ProjectSection = ({ children }) => {
 	)
 }
 
-class DokYAYDesignProjectPage extends Component {
-	constructor(props) {
-		super(props)
-		this.state = {
-			selectedImageSrc: "",
-			isDialogOpen: false
-		}
-		this.introRef = createRef()
-	}
-
-	handleOpenDialog = (imageSrc) => {
-		this.setState({
-			selectedImageSrc: imageSrc,
-			isDialogOpen: true
-		})
-	}
-
-	handleCloseDialog = () => {
-		this.setState({
-			selectedImageSrc: "",
-			isDialogOpen: false
-		})
-	}
-
-	render() {
-		const { selectedImageSrc, isDialogOpen } = this.state
-
-		return (
-			<Fragment>
-				<Head>
-					<title>dokYAY | Andreas Wangsanata</title>
-				</Head>
-
-				<ProjectLayout>
-					<ProjectTitle>
-						dokYAY
-					</ProjectTitle>
-					<ProjectSection>
-						<InteractiveAutoPlaySwipableViews content={mockupImageData} />
-					</ProjectSection>
-				</ProjectLayout>
-			</Fragment>
-		)
-	}
+const DokYAYDesignProjectPage = () => {
+	return (
+		<Fragment>
+			<ProjectLayout
+				projectTitle="dokYAY"
+				projectDescription={`This project began as an idea to help patients to find the best nearest doctor for them.
+					The idea is to create a mobile app that could map the nearest medical practicioners, which would also contain details about the medical practice & user reviews.
+					Reservations could also be done in this mobile app, so that patients do not need to spend a lot of time waiting for the doctor.`}
+				projectKeywords="project, ui, ux, design, dokyay, andreas, wangsanata"
+				projectImageURL="/static/images/projects/design/dokyay/mock_2.png"
+			>
+				<ProjectTitle>
+					dokYAY
+				</ProjectTitle>
+				<ProjectSection>
+					<InteractiveAutoPlaySwipableViews content={mockupImageData} />
+				</ProjectSection>
+			</ProjectLayout>
+		</Fragment>
+	)
 }
 
 export default DokYAYDesignProjectPage
