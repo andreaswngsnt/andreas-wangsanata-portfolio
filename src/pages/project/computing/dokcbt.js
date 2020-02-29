@@ -1,8 +1,9 @@
 ﻿import { Component, Fragment, createRef } from "react"
 
-import { Dialog, Hidden } from "@material-ui/core"
+import { Dialog, Grid, Hidden, CircularProgress } from "@material-ui/core"
 import SwipeableViews from "react-swipeable-views"
 import { autoPlay } from "react-swipeable-views-utils"
+import axios from "axios"
 
 import ClickableImage from "../../../components/ClickableImage"
 import ProjectLayout from "../../../components/Layout/ProjectLayout"
@@ -73,6 +74,80 @@ class InteractiveAutoPlaySwipableViews extends Component {
 	}
 }
 
+class DokCBTArticles extends Component {
+	constructor(props) {
+		super(props)
+		this.state = {
+			articles: [],
+			isLoading: true
+		}
+	}
+
+	handleGetArticles = () => {
+		this.setState({ isLoading: true }, async () => {
+			try {
+				const response = await axios.get("https://api.dokcbt.com/article/getAllPublishedArticlesByQuery?page=1&size=5&sort=created&order=desc")
+				const { data: { data: articleList } } = response
+
+				console.log(articleList)
+
+				this.setState({
+					articles: articleList,
+					isLoading: false
+				})
+			} catch (error) {
+				console.error(response)
+			}
+		})
+	}
+
+	componentDidMount() {
+		this.handleGetArticles()
+	}
+
+	render() {
+		const { articles, isLoading } = this.state
+
+		if (isLoading) {
+			return (
+				<div style={{ textAlign: "center" }}>
+					<CircularProgress />
+				</div>
+			)
+		} else {
+			if (articles.length > 0) {
+				return (
+					<Grid container spacing={3}>
+						{articles.map((article) => {
+							const { _id, slug, title, description, primaryImageURL } = article
+
+							return (
+								<Fragment key={`article${_id}`}>
+									<Grid item xl={4} md={4} xs={12}>
+										<img
+											src={primaryImageURL}
+											style={{ width: "100%" }}
+										/>
+									</Grid>
+									<Grid item xl={8} md={8} xs={12}>
+										<h3>{title}</h3>
+										<p>{description}</p>
+										<a target="_blank" href={`https://www.dokcbt.com/artikel/${slug}`}>
+											Read Article
+										</a>
+									</Grid>
+								</Fragment>
+							)
+						})}
+					</Grid>
+				)
+			} else {
+				return <p>There is no article in the database...</p>
+			}
+		}
+	}
+}
+
 const ProjectSection = ({ children }) => {
 	return (
 		<div style={{ marginBottom: "2rem" }}>{children}</div>
@@ -89,6 +164,7 @@ class DokCBTComputingProjectPage extends Component {
 		this.introRef = createRef()
 		this.screenshotRef = createRef()
 		this.socmedRef = createRef()
+		this.articleRef = createRef()
 		this.contribRef = createRef()
 	}
 
@@ -158,6 +234,10 @@ class DokCBTComputingProjectPage extends Component {
 						/>
 					</ProjectSection>
 					<ProjectSection>
+						<h2 ref={this.articleRef}>Articles</h2>
+						<DokCBTArticles />
+					</ProjectSection>
+					<ProjectSection>
 						<h2 ref={this.contribRef}>Contributions</h2>
 						<p>My contributions in this project are:</p>
 						<ul>
@@ -175,6 +255,7 @@ class DokCBTComputingProjectPage extends Component {
 									{ name: "Introduction", ref: this.introRef },
 									{ name: "Screenshots", ref: this.screenshotRef },
 									{ name: "Social Media", ref: this.socmedRef },
+									{ name: "Articles", ref: this.articleRef },
 									{ name: "Contributions", ref: this.contribRef }
 								]
 							}
