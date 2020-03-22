@@ -2,7 +2,7 @@ import { Component, Fragment } from "react"
 import { Button, CircularProgress } from "@material-ui/core"
 import ProjectLayout from "../../../components/Layout/ProjectLayout"
 
-class InsertionSort extends Component {
+class Sort extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -15,79 +15,6 @@ class InsertionSort extends Component {
 		this.setState({
 			numbers: [5, 2, 4, 6, 1, 3, 10, 9, 7, 4, 8, 6, 2, 1, 5],
 			status: "UNSORTED"
-		})
-	}
-
-	sortVisualize = () => {
-		const { numbers } = this.state
-
-		this.setState({ status: "IS_SORTING" }, () => {
-			let sortedNumbers = [...numbers]
-
-			let i = 0
-
-			const test1 = () => {
-				if (i < sortedNumbers.length - 1) {
-					setTimeout(() => {
-						console.log('i', i)
-						if (sortedNumbers[i + 1] < sortedNumbers[i]) {
-
-							for (let j = 0; j < (i + 1); j++) {
-								if (sortedNumbers[j] > sortedNumbers[i + 1]) {
-									console.log('j', j)
-
-									const movedElement = sortedNumbers[i + 1]
-									sortedNumbers.splice(i + 1, 1)
-									sortedNumbers.splice(j, 0, movedElement)
-
-									this.setState({ numbers: sortedNumbers })
-
-								}
-							}
-
-						}
-						if (i === sortedNumbers.length - 2) {
-							this.setState({ status: "SORTED" })
-						}
-						i++
-						test1()
-					}, 1000)
-				}
-			}
-
-			test1()
-		})
-	}
-
-	sort = () => {
-		const { numbers } = this.state
-
-		this.setState({ status: "IS_SORTING" }, () => {
-			let sortedNumbers = [...numbers]
-
-			for (let i = 0; i < sortedNumbers.length - 1; i++) {
-
-				if (sortedNumbers[i + 1] < sortedNumbers[i]) {
-
-					for (let j = 0; j < (i + 1); j++) {
-
-						if (sortedNumbers[j] > sortedNumbers[i + 1]) {
-
-							const movedElement = sortedNumbers[i + 1]
-							sortedNumbers.splice(i + 1, 1)
-							sortedNumbers.splice(j, 0, movedElement)
-
-							this.setState({ numbers: sortedNumbers })
-						}
-
-					}
-				}
-			}
-
-			this.setState({
-				numbers: sortedNumbers,
-				status: "SORTED"
-			})
 		})
 	}
 
@@ -120,7 +47,7 @@ class InsertionSort extends Component {
 		}
 	}
 
-	renderStatus = () => {
+	renderActionButtons = () => {
 		const { status } = this.state
 
 		switch (status) {
@@ -156,8 +83,14 @@ class InsertionSort extends Component {
 
 		return (
 			<div>
-				{this.renderStatus()}
-				<div style={{ display: "flex", marginTop: "1rem" }}>
+				{this.renderActionButtons()}
+				<div
+					style={{
+						display: "flex",
+						flexWrap: "wrap",
+						marginTop: "1rem"
+					}}
+				>
 					{numbers.map((entry, index) => {
 						return (
 							<div
@@ -182,6 +115,279 @@ class InsertionSort extends Component {
 	}
 }
 
+class InsertionSort extends Sort {
+	sort = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+
+			for (let i = 0; i < sortedNumbers.length - 1; i++) {
+
+				if (sortedNumbers[i + 1] < sortedNumbers[i]) {
+
+					for (let j = 0; j < (i + 1); j++) {
+
+						if (sortedNumbers[j] > sortedNumbers[i + 1]) {
+
+							const movedElement = sortedNumbers[i + 1]
+							sortedNumbers.splice(i + 1, 1)
+							sortedNumbers.splice(j, 0, movedElement)
+
+							this.setState({ numbers: sortedNumbers })
+						}
+
+					}
+				}
+			}
+
+			this.setState({
+				numbers: sortedNumbers,
+				status: "SORTED"
+			})
+		})
+	}
+
+	sortVisualize = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+
+			let i = 0
+
+			const test1 = () => {
+				if (i < sortedNumbers.length - 1) {
+					setTimeout(() => {
+						if (sortedNumbers[i + 1] < sortedNumbers[i]) {
+
+							for (let j = 0; j < (i + 1); j++) {
+								if (sortedNumbers[j] > sortedNumbers[i + 1]) {
+
+									const movedElement = sortedNumbers[i + 1]
+									sortedNumbers.splice(i + 1, 1)
+									sortedNumbers.splice(j, 0, movedElement)
+
+									this.setState({ numbers: sortedNumbers })
+
+								}
+							}
+
+						}
+						if (i === sortedNumbers.length - 2) {
+							this.setState({ status: "SORTED" })
+						}
+						i++
+						test1()
+					}, 1000)
+				}
+			}
+
+			test1()
+		})
+	}
+}
+
+class BubbleSort extends Sort {
+	sort = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+			let isSorted = false
+
+			while (!isSorted) {
+				isSorted = true
+
+				for (let i = 0; i < sortedNumbers.length - 1; i++) {
+					if (sortedNumbers[i] > sortedNumbers[i + 1]) {
+						const bigNumber = sortedNumbers[i]
+						const smallNumber = sortedNumbers[i + 1]
+						sortedNumbers[i] = smallNumber
+						sortedNumbers[i + 1] = bigNumber
+						isSorted = false
+					}
+				}
+			}
+
+			this.setState({
+				numbers: sortedNumbers,
+				status: "SORTED"
+			})
+		})
+	}
+
+	sortVisualize = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+			let isSorted = false
+
+			const loop = () => {
+				if (!isSorted) {
+					setTimeout(() => {
+						isSorted = true
+
+						for (let i = 0; i < sortedNumbers.length - 1; i++) {
+							if (sortedNumbers[i] > sortedNumbers[i + 1]) {
+								const bigNumber = sortedNumbers[i]
+								const smallNumber = sortedNumbers[i + 1]
+								sortedNumbers[i] = smallNumber
+								sortedNumbers[i + 1] = bigNumber
+								isSorted = false
+							}
+						}
+
+						this.setState({ numbers: sortedNumbers })
+						if (isSorted) {
+							this.setState({ status: "SORTED" })
+						}
+
+						loop()
+					}, 1000)
+				}
+			}
+
+			loop()
+		})
+	}
+}
+
+class SelectionSort extends Sort {
+	sort = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+
+			for (let i = 0; i < sortedNumbers.length; i++) {
+				let smallestElementIndex = i
+				let smallestElement = sortedNumbers[i]
+
+				for (let j = i; j < sortedNumbers.length; j++) {
+					if (sortedNumbers[j] < smallestElement) {
+						smallestElement = sortedNumbers[j]
+						smallestElementIndex = j
+					}
+				}
+
+				sortedNumbers.splice(smallestElementIndex, 1)
+				sortedNumbers.splice(i, 0, smallestElement)
+			}
+
+			this.setState({
+				numbers: sortedNumbers,
+				status: "SORTED"
+			})
+		})
+	}
+
+	sortVisualize = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+
+			let i = 0
+			const loop1 = () => {
+				if (i < sortedNumbers.length) {
+					setTimeout(() => {
+						let smallestElementIndex = i
+						let smallestElement = sortedNumbers[i]
+
+						for (let j = i; j < sortedNumbers.length; j++) {
+							if (sortedNumbers[j] < smallestElement) {
+								smallestElement = sortedNumbers[j]
+								smallestElementIndex = j
+							}
+						}
+
+						sortedNumbers.splice(smallestElementIndex, 1)
+						sortedNumbers.splice(i, 0, smallestElement)
+						this.setState({ numbers: sortedNumbers })
+						if (i === sortedNumbers.length - 1) {
+							this.setState({ status: "SORTED" })
+						}
+
+						i++
+						loop1()
+					}, 1000)
+				}
+			}
+			loop1()
+			
+		})
+	}
+}
+
+class MergeSort extends Sort {
+	sort = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+
+			for (let i = 0; i < sortedNumbers.length; i++) {
+				let smallestElementIndex = i
+				let smallestElement = sortedNumbers[i]
+
+				for (let j = i; j < sortedNumbers.length; j++) {
+					if (sortedNumbers[j] < smallestElement) {
+						smallestElement = sortedNumbers[j]
+						smallestElementIndex = j
+					}
+				}
+
+				sortedNumbers.splice(smallestElementIndex, 1)
+				sortedNumbers.splice(i, 0, smallestElement)
+			}
+
+			this.setState({
+				numbers: sortedNumbers,
+				status: "SORTED"
+			})
+		})
+	}
+
+	sortVisualize = () => {
+		const { numbers } = this.state
+
+		this.setState({ status: "IS_SORTING" }, () => {
+			let sortedNumbers = [...numbers]
+
+			let i = 0
+			const loop1 = () => {
+				if (i < sortedNumbers.length) {
+					setTimeout(() => {
+						let smallestElementIndex = i
+						let smallestElement = sortedNumbers[i]
+
+						for (let j = i; j < sortedNumbers.length; j++) {
+							if (sortedNumbers[j] < smallestElement) {
+								smallestElement = sortedNumbers[j]
+								smallestElementIndex = j
+							}
+						}
+
+						sortedNumbers.splice(smallestElementIndex, 1)
+						sortedNumbers.splice(i, 0, smallestElement)
+						this.setState({ numbers: sortedNumbers })
+						if (i === sortedNumbers.length - 1) {
+							this.setState({ status: "SORTED" })
+						}
+
+						i++
+						loop1()
+					}, 1000)
+				}
+			}
+			loop1()
+
+		})
+	}
+}
+
 class AlgorithmsComputingProjectPage extends Component {
 	render() {
 		return (
@@ -196,11 +402,11 @@ class AlgorithmsComputingProjectPage extends Component {
 					<h3>Insertion Sort</h3>
 					<InsertionSort />
 					<h3>Bubble Sort</h3>
-					<InsertionSort />
+					<BubbleSort />
 					<h3>Selection Sort</h3>
-					<InsertionSort />
+					<SelectionSort />
 					<h3>Merge Sort</h3>
-					<InsertionSort />
+					<MergeSort />
 				</ProjectLayout>
 			</Fragment>
 		)
