@@ -322,26 +322,55 @@ class SelectionSort extends Sort {
 }
 
 class MergeSort extends Sort {
+	mergeSort = (arr) => {
+		let sortedNumbers = []
+		let midArrayIndex = Math.floor(arr.length / 2)
+		let arrayA = [], arrayB = []
+
+		for (let i = 0; i < midArrayIndex; i++) {
+			arrayA.push(arr[i])
+		}
+		for (let i = midArrayIndex; i < arr.length; i++) {
+			arrayB.push(arr[i])
+		}
+
+		if (arrayA.length > 1) {
+			arrayA = this.mergeSort(arrayA)
+		}
+		if (arrayB.length > 1) {
+			arrayB = this.mergeSort(arrayB)
+		}
+
+		let i = 0, j = 0
+
+		while (i < arrayA.length && j < arrayB.length) {
+			if (arrayA[i] < arrayB[j]) {
+				sortedNumbers.push(arrayA[i])
+				i++
+			} else {
+				sortedNumbers.push(arrayB[j])
+				j++
+			}
+		}
+
+		while (i < arrayA.length) {
+			sortedNumbers.push(arrayA[i])
+			i++
+		}
+
+		while (j < arrayB.length) {
+			sortedNumbers.push(arrayB[j])
+			j++
+		}
+
+		return sortedNumbers
+	}
+
 	sort = () => {
 		const { numbers } = this.state
 
 		this.setState({ status: "IS_SORTING" }, () => {
-			let sortedNumbers = [...numbers]
-
-			for (let i = 0; i < sortedNumbers.length; i++) {
-				let smallestElementIndex = i
-				let smallestElement = sortedNumbers[i]
-
-				for (let j = i; j < sortedNumbers.length; j++) {
-					if (sortedNumbers[j] < smallestElement) {
-						smallestElement = sortedNumbers[j]
-						smallestElementIndex = j
-					}
-				}
-
-				sortedNumbers.splice(smallestElementIndex, 1)
-				sortedNumbers.splice(i, 0, smallestElement)
-			}
+			const sortedNumbers = this.mergeSort(numbers)
 
 			this.setState({
 				numbers: sortedNumbers,
