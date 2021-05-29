@@ -15,7 +15,8 @@ const menuObject = {
 		{
 			name: "Computing",
 			children: [
-				{ name: "dokCBT", linkHref: "/project/computing/dokcbt" }
+				{ name: "dokCBT", linkHref: "/project/computing/dokcbt" },
+				{ name: "Algorithms", linkHref: "/project/computing/algorithms" }
 			]
 		},
 		{

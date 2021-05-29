@@ -229,22 +229,34 @@ class BubbleSort extends Sort {
 					setTimeout(() => {
 						isSorted = true
 
-						for (let i = 0; i < sortedNumbers.length - 1; i++) {
-							if (sortedNumbers[i] > sortedNumbers[i + 1]) {
-								const bigNumber = sortedNumbers[i]
-								const smallNumber = sortedNumbers[i + 1]
-								sortedNumbers[i] = smallNumber
-								sortedNumbers[i + 1] = bigNumber
-								isSorted = false
+						let i = 0
+						const loop2 = () => {
+							if (i < sortedNumbers.length - 1) {
+								if (sortedNumbers[i] > sortedNumbers[i + 1]) {
+									setTimeout(() => {
+										const bigNumber = sortedNumbers[i]
+										const smallNumber = sortedNumbers[i + 1]
+										sortedNumbers[i] = smallNumber
+										sortedNumbers[i + 1] = bigNumber
+										isSorted = false
+
+										this.setState({ numbers: sortedNumbers })
+										i++
+										loop2()
+									}, 1000)
+								} else {
+									i++
+									loop2()
+								}
+							} else {
+								if (isSorted) {
+									this.setState({ status: "SORTED" })
+								}
+								loop()
 							}
 						}
-
-						this.setState({ numbers: sortedNumbers })
-						if (isSorted) {
-							this.setState({ status: "SORTED" })
-						}
-
-						loop()
+						loop2()
+						
 					}, 1000)
 				}
 			}
